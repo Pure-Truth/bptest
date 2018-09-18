@@ -32,7 +32,7 @@
 
 			<div class="site-branding">
 
-				<?php
+				<?php/*
 				$site_url="http://".$_SERVER['SERVER_NAME'];
 				$rsSites = CSite::GetByID(SITE_ID);
 				$arSite = $rsSites->Fetch();
@@ -48,8 +48,8 @@
 				$description = "Just another WPStash Sites site"
 				if ( $description ) : ?>
 					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
-				endif; ?>
+				*/<?php/*
+			endif; */?>
 
 			</div><!-- .site-branding -->
 
