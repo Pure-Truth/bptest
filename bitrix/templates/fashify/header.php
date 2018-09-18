@@ -32,13 +32,13 @@
 
 			<div class="site-branding">
 
-				<?php/*
+				<?php
 				$site_url="http://".$_SERVER['SERVER_NAME'];
 				$rsSites = CSite::GetByID(SITE_ID);
 				$arSite = $rsSites->Fetch();
-				$siteName = $arSite['SITE_NAME'];
+				$siteName = $arSite['SITE_NAME'];?>
 
-				if ( CSite::InDir('/index.php') ) :?>
+				<?/*if ( CSite::InDir('/index.php') ) :?>
 					<h1 class="site-title"><?php print_url($site_url.'/index.php',$siteName,'rel="home"') ?></h1>
 				<?php else : ?>
 					<p class="site-title"><?php print_url($site_url.'/index.php',$siteName,'rel="home"') ?></p>
@@ -48,8 +48,8 @@
 				$description = "Just another WPStash Sites site"
 				if ( $description ) : ?>
 					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				*/<?php/*
-			endif; */?>
+				<?php
+				endif; ?>
 
 			</div><!-- .site-branding -->
 
