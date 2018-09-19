@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/components/bitrix/news.detail/templates/flat/script.js" => "15372627393288",)); ?>

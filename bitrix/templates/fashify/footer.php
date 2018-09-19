@@ -1,4 +1,5 @@
-	</div><!-- #content -->
+</div>
+</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -26,7 +27,7 @@
 			<div class="container">
 
 				<div class="site-copyright">
-					<?php// printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'fashify' ), date_i18n( __('Y', 'fashify') ), get_bloginfo( 'name' ) ); ?>
+					<?php printf(html_entity_decode( 'Copyright &copy; '.date('Y').' '.$siteName.' All Rights Reserved.')); ?>
 				</div>
 
 
