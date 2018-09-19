@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/templates/fashify/components/bitrix/menu/mainmenu/style.css" => "1537355041490","/bitrix/js/main/core/css/core_panel.css" => "153726273262290","/bitrix/js/fileman/sticker.css" => "153726273724594",)); ?>

@@ -16,6 +16,9 @@
 </head>
 
 <body>
+
+<div><?$APPLICATION->ShowPanel();?></div>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
 
@@ -65,8 +68,28 @@
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="container">
+			<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">Меню</button>
 
-			<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">Здесь должно быть меню!</button>
+				<?$APPLICATION->IncludeComponent(
+				"bitrix:menu",
+				"mainmenu",
+				array(
+					"ALLOW_MULTI_SELECT" => "N",
+					"CHILD_MENU_TYPE" => "top",
+					"DELAY" => "N",
+					"MAX_LEVEL" => "1",
+					"MENU_CACHE_GET_VARS" => array(
+					),
+					"MENU_CACHE_TIME" => "3600",
+					"MENU_CACHE_TYPE" => "N",
+					"MENU_CACHE_USE_GROUPS" => "Y",
+					"MENU_THEME" => "site",
+					"ROOT_MENU_TYPE" => "top",
+					"USE_EXT" => "N",
+					"COMPONENT_TEMPLATE" => "mainmenu"
+				),
+				false
+			);?>
 
 		</div>
 	</nav><!-- #site-navigation -->
