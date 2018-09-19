@@ -27,7 +27,9 @@ return array (
   array (
     'value' =>
     array (
-      'debug' => false,
+      //<<Антон
+      //'debug' => true,
+      'debug' => true,
       'handled_errors_types' => 4437,
       'exception_errors_types' => 4437,
       'ignore_silence' => false,
@@ -43,9 +45,9 @@ return array (
     ),
     'readonly' => false,
   ),
-  'crypto' => 
+  'crypto' =>
   array (
-    'value' => 
+    'value' =>
     array (
         'crypto_key' => 'ev4b9c441e7ey1vpi8zlz4m0ol9loak7',
     ),

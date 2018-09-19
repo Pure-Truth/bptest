@@ -1,25 +1,17 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?php
-/**
- * The header for our theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Fashify
- */
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=<?=SITE_CHARSET?>"/>
+
+<?$APPLICATION->ShowHead();?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/style.css" />
+<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/assets/css/font-awesome.min.css" />
+<link rel='stylesheet' id='fashify-fonts-css'  href='https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/inline.css" />
 
 <title><?$APPLICATION->ShowTitle()?></title>
-<?$APPLICATION->ShowHead();?>
 
 </head>
 
@@ -38,14 +30,15 @@
 				$arSite = $rsSites->Fetch();
 				$siteName = $arSite['SITE_NAME'];?>
 
-				<?/*if ( CSite::InDir('/index.php') ) :?>
-					<h1 class="site-title"><?php print_url($site_url.'/index.php',$siteName,'rel="home"') ?></h1>
+				<?if ( CSite::InDir('/index.php') ) :?>
+					<h1 class="site-title"><?php echo print_url($site_url.'/index.php',$siteName,'rel="home"') ?></h1>
 				<?php else : ?>
-					<p class="site-title"><?php print_url($site_url.'/index.php',$siteName,'rel="home"') ?></p>
+					<p class="site-title"><?php echo print_url($site_url.'/index.php',$siteName,'rel="home"') ?></p>
 				<?php
 				endif;
 
-				$description = "Just another WPStash Sites site"
+
+				$description = "Just another WPStash Sites site";
 				if ( $description ) : ?>
 					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 				<?php
